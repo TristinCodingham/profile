@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="/src/style.css" />
+    <title>Welcome!</title>
+  </head>
+  <body class="load">
+    <aside>
+      <figure>
+        <div id="avatar"></div>
+        <figcaption>
+          Tristin Cunningham
+        </figcaption>
+      </figure>
+      <img src="src/hamburger.png" alt="" />
+      <div id="sideBarDivide"></div>
+      <nav>
+        <ul>
+          <div id="phoneTop">
+            <div id="phoneSpeaker"></div>
+          </div>
+          <div id="phoneTab"></div>
+          <li><a id="anchHome" href="#">Home</a></li>
+          <li><a id="anchAbout" href="#">About me</a></li>
+          <li><a id="anchPortfolio" href="#">Portfolio</a></li>
+          <li><a id="anchContact" href="#">Contact</a></li>
+          <div id="phoneFooter">
+            <footer>
+              2019&copy;
+            </footer>
+          </div>
+          <div id="phoneBottom"></div>
+        </ul>
+      </nav>
+    </aside>
+    <main id="mainPage">
+      <h1>Fullstack Developer</h1>
+      <p>Forging effective, working, user-friendly websites is the ideal.</p>
+      <a href="/contact.html" class="callToAction">Get in touch</a>
+    </main>
+
+    <main id="aboutPage" class="aboutPage">
+      <h1>Hi there!</h1>
+      <h4>My name is Tristin, great to meet you!</h4>
+      <p>I currently live in Jeffery's Bay, EasternCape, South Africa.</p>
+      <p>
+        I'm a front-end web developer, forging effective, user-friendly websites
+        is the ideal.
+      </p>
+      <br />
+      <p>
+        However, I'm not limited to just the front-end, I have a C#, Node.js and
+        PHP background, in addition to MongoDB, MySQL database and API workings.
+      </p>
+      <p>
+        I have a relentless drive to create, concatenated with my taste for a
+        simple and effective design to give users a feel of professionalism.
+      </p>
+      <br />
+      <p>
+        I love complex topics, my idol is Elon Musk and I have an extreme fear
+        of heights! - Alttitude, not company heights ;)
+      </p>
+      <p>
+        I intend on becomming a professional, fullstack developer in the
+        foreseeable future, or maybe we can do that
+        <a href="#" class="callToAction" style="margin-left: 0px;">together!</a>
+      </p>
+    </main>
+
+    <main id="portfolioPage" class="portfolioPage">
+      <div class="goals">
+        <h2>Goals</h2>
+        <h3>I'm self taught, thriving to learn.</h3>
+        <p style="font-family: Audiowide">
+          My drive is to make websites more user-friendly while delivering a
+          modern or professional feel and look.
+        </p>
+      </div>
+      <div class="skills">
+        <h2>Skills</h2>
+        <div id="skillsGrid">
+          <div>
+            <h3>Frontend</h3>
+            <ul>
+              <li>Html/3</li>
+              <li>Css/3</li>
+              <li>Javascript</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Backend</h3>
+            <ul>
+              <li>Node.js</li>
+              <li>MySQL</li>
+              <li>PHP</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="additional">
+        <h2>Toolbox</h2>
+        <div id="additionalGrid">
+          <div>
+            <h3>Libraries</h3>
+            <ul>
+              <li>React.Js</li>
+            </ul>
+            <h3>Frameworks</h3>
+            <ul>
+              <li>Bootstrap</li>
+              <li>Express.Js</li>
+            </ul>
+            <h3>Additional</h3>
+            <ul>
+              <li>NPM</li>
+              <li>C#</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Source control</h3>
+            <ul>
+              <li>Github</li>
+            </ul>
+            <h3>Design</h3>
+            <ul>
+              <li>Photoscape</li>
+              <li>Inkscape</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <main id="contactPage" class="contactPage">
+      <div id="contactDetails">
+        <h2>Contact</h2>
+        <p>Cell: 0738188072</p>
+        <p>Email: tctristinc72@gmail.com</p>
+      </div>
+
+      <div class="contactGrid contactGridAlign">
+        <a href="https://twitter.com/Codingham" class="socialLinks twitter"
+          ><img src="./src/twitter.png" class="icons" />
+          <div class="textAnimate">Twitter</div></a
+        >
+        <a href="https://github.com/TristinCodingham" class="socialLinks github"
+          ><img src="./src/github.png" class="icons" />
+          <div class="textAnimate">Github</div></a
+        >
+        <a
+          href="https://www.linkedin.com/in/tristin-cunningham-338688169/"
+          class="socialLinks linkedin"
+          ><img src="./src/linkedin.png" class="icons" />
+          <div class="textAnimate">Linkedin</div></a
+        >
+      </div>
+    </main>
+
+    <script>
+      (function() {
+        let menu = document.querySelector("ul");
+        let menuLink = document.querySelector("img");
+        let body = document.querySelector("body");
+        let anchHome = document.getElementById("anchHome");
+        let anchAbout = document.getElementById("anchAbout");
+        let anchPortfolio = document.getElementById("anchPortfolio");
+        let anchContact = document.getElementById("anchContact");
+        let mainPage = document.getElementById("mainPage");
+        let aboutPage = document.getElementById("aboutPage");
+        let portfolioPage = document.getElementById("portfolioPage");
+        let contactPage = document.getElementById("contactPage");
+
+        menuLink.addEventListener("click", e => {
+          menu.classList.toggle("active");
+          e.preventDefault();
+        });
+
+        anchHome.addEventListener("click", e => {
+          portfolioPage.style = "display: none";
+          contactPage.style = "display:none";
+
+          anchAbout.classList.remove("anchActive");
+          anchPortfolio.classList.remove("anchActive");
+          anchContact.classList.remove("anchActive");
+          anchHome.classList.add("anchActive");
+
+          if (mainPage.classList.contains("mainPage")) {
+            aboutPage.classList.add("aboutPage");
+            portfolioPage.classList.add("portfolioPage");
+            contactPage.classList.add("contactPage");
+            mainPage.classList.toggle("mainPage");
+            menu.classList.remove("active");
+          }
+
+          e.preventDefault();
+        });
+
+        anchAbout.addEventListener("click", e => {
+          portfolioPage.style = "display: none";
+          contactPage.style = "display:none";
+
+          anchPortfolio.classList.remove("anchActive");
+          anchContact.classList.remove("anchActive");
+          anchHome.classList.remove("anchActive");
+          anchAbout.classList.add("anchActive");
+
+          if (aboutPage.classList.contains("aboutPage")) {
+            mainPage.classList.add("mainPage");
+            portfolioPage.classList.add("portfolioPage");
+            contactPage.classList.add("contactPage");
+            aboutPage.classList.toggle("aboutPage");
+            menu.classList.remove("active");
+          }
+
+          e.preventDefault();
+        });
+
+        anchPortfolio.addEventListener("click", e => {
+          contactPage.style = "display:none";
+          anchContact.classList.remove("anchActive");
+          anchHome.classList.remove("anchActive");
+          anchAbout.classList.remove("anchActive");
+          anchPortfolio.classList.add("anchActive");
+
+          if (portfolioPage.classList.contains("portfolioPage")) {
+            mainPage.classList.add("mainPage");
+            aboutPage.classList.add("aboutPage");
+            contactPage.classList.add("contactPage");
+            portfolioPage.classList.toggle("portfolioPage");
+            portfolioPage.style = "display: grid";
+            menu.classList.remove("active");
+          }
+
+          e.preventDefault();
+        });
+
+        anchContact.addEventListener("click", e => {
+          portfolioPage.style = "display: none";
+
+          anchHome.classList.remove("anchActive");
+          anchAbout.classList.remove("anchActive");
+          anchPortfolio.classList.remove("anchActive");
+          anchContact.classList.add("anchActive");
+
+          if (contactPage.classList.contains("contactPage")) {
+            mainPage.classList.add("mainPage");
+            aboutPage.classList.add("aboutPage");
+            portfolioPage.classList.add("portfolioPage");
+            contactPage.classList.toggle("contactPage");
+            contactPage.style = "display: grid";
+            menu.classList.remove("active");
+          }
+
+          e.preventDefault();
+        });
+
+        window.onload = () => {
+          body.classList.toggle("load");
+        };
+
+        window.onunload = () => {};
+      })();
+    </script>
+  </body>
+</html>
